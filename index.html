@@ -6,11 +6,19 @@
 xmlhttp.onreadystatechange = function() {
   if(this.readyState == 4 && this.status == 200) {
     var mydata = JSON.parse(this.responseText);
-    window.alert(mydata.food[1].name);
+    window.alert(mydata.name);
   }
 };
-xmlhttp.open("GET", "bento.json" , true);
+xmlhttp.open("GET", "restraunt.json" , true);
 xmlhttp.send();
+//-------------------------------------------------------------------------------------------
+function display(){
+ var x = document.getElementById('quant').value
+document.getElementById('test').innerHTML = x;
+}
     </script>
+      <input type="text" id="quant">
+<button onclick = "display()">Order</button>
+<h1 id = "test"></h1>
   </body>
 </html>
