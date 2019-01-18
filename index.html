@@ -9,6 +9,8 @@ xmlhttp.onreadystatechange = function() {
     document.getElementById('food').innerHTML = mydata.food[0].name;
         document.getElementById('price').innerHTML =  "$"+ mydata.food[0].price;
   var p = mydata.food[0].price
+    document.getElementById('test').innerHTML = p
+
   }
 };
 xmlhttp.open("GET", "bento.json" , true);
@@ -18,7 +20,6 @@ function display(){
  var x = document.getElementById('quant').value
 var btax = x * p
 document.getElementById('total').innerHTML = btax
-  document.getElementById('test').innerHTML = p
 
 }
     </script>
