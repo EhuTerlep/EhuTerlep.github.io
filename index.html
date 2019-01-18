@@ -8,6 +8,8 @@ xmlhttp.onreadystatechange = function() {
     var mydata = JSON.parse(this.responseText);
     document.getElementById('food').innerHTML = mydata.food[0].name;
         document.getElementById('price').innerHTML =  "$"+ mydata.food[0].price;
+  var p = mydata.food[0].price
+ document.getElementById('test2').innerHTML = p
   }
 };
 xmlhttp.open("GET", "bento.json" , true);
@@ -16,8 +18,7 @@ xmlhttp.send();
 function display(){
  var x = document.getElementById('quant').value
 document.getElementById('test').innerHTML = x
- var p = mydata.food[0].price
- document.getElementById('test2').innerHTML = p
+
 document.getElementById('total').innerHTML = btax
 }
     </script>
