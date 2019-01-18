@@ -16,13 +16,15 @@ xmlhttp.send();
 function display(){
  var x = document.getElementById('quant').value
 document.getElementById('test').innerHTML = x
- var btax = x * mydata.food[0].price
+ var p = mydata.food[0].price
+ document.getElementById('test2').innerHTML = p
 document.getElementById('total').innerHTML = btax
 }
     </script>
       <input type="text" id="quant">
 <button onclick = "display()">Order</button>
 <h1 id = "test"></h1>
+    <h1 id = "test2"></h1>
     <h1 id = "food"></h1>
 <h3 id = "price"></h3>
     <h2 id = "total"></h2>
