@@ -15,7 +15,8 @@ xmlhttp.send();
 //-------------------------------------------------------------------------------------------
 function display(){
  var x = document.getElementById('quant').value
-var btax = x * mydata.food[0].price
+document.getElementById('test').innerHTML = x
+ var btax = x * mydata.food[0].price
 document.getElementById('total').innerHTML = btax
 }
     </script>
