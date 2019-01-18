@@ -18,10 +18,13 @@ function display(){
  var x = document.getElementById('quant').value
 var btax = x * p
 document.getElementById('total').innerHTML = btax
+  document.getElementById('test').innerHTML = p
+
 }
     </script>
       <input type="text" id="quant">
 <button onclick = "display()">Order</button>
+    <h1 id = "test"></h1>
     <h1 id = "food"></h1>
 <h3 id = "price"></h3>
     <h2 id = "total"></h2>
