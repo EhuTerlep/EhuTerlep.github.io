@@ -2,14 +2,15 @@
   <body>
     
     <script>
+      var p;
       var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if(this.readyState == 4 && this.status == 200) {
              var mydata = JSON.parse(this.responseText);
     document.getElementById('food').innerHTML = mydata.food[0].name;
         document.getElementById('price').innerHTML =  "$"+ mydata.food[0].price;
-  var p = mydata.food[0].price
-
+  var p = mydata.food[0].tax
+       
   }
 };
 xmlhttp.open("GET", "bento.json" , true);
@@ -19,11 +20,12 @@ xmlhttp.send();
       var x = document.getElementById('quant').value
  document.getElementById('test').innerHTML = x
  }
-    document.getElementById('test').innerHTML = p
+    document.getElementById('test2').innerHTML = p
     </script>
       <input type="text" id="quant">
     <button onclick = "display()">Order</button>
     <h1 id = "test"></h1>
+        <h1 id = "test2"></h1>
     <h1 id = "food"></h1>
 <h3 id = "price"></h3>
     <h2 id = "total"></h2>
