@@ -9,7 +9,7 @@ xmlhttp.onreadystatechange = function() {
              var mydata = JSON.parse(this.responseText);
     document.getElementById('food').innerHTML = mydata.food[0].name;
         document.getElementById('price').innerHTML =  "$"+ mydata.food[0].price;
-  var p = mydata.food[0].tax
+  var p = mydata.food[0].price
        
   }
 };
@@ -19,8 +19,10 @@ xmlhttp.send();
  function display() {
       var x = document.getElementById('quant').value
  document.getElementById('test').innerHTML = x
+var total = x * 5
+document.getElementById('t').innerHTML = total
  }
-    document.getElementById('test2').innerHTML = p
+      
     </script>
       <input type="text" id="quant">
     <button onclick = "display()">Order</button>
@@ -28,6 +30,6 @@ xmlhttp.send();
     <h1 id = "food"></h1>
 <h3 id = "price"></h3>
     <h2 id = "total"></h2>
-
+    <h1 id = "t"></h1>
   </body>
 </html>
