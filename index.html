@@ -4,8 +4,8 @@
     <script>
       var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
-         var mydata = JSON.parse(this.responseText);
   if(this.readyState == 4 && this.status == 200) {
+             var mydata = JSON.parse(this.responseText);
     document.getElementById('food').innerHTML = mydata.food[0].name;
         document.getElementById('price').innerHTML =  "$"+ mydata.food[0].price;
   var p = mydata.food[0].price
