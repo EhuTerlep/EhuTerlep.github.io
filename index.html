@@ -21,7 +21,8 @@ xmlhttp.send();
       var x = document.getElementById('quant').value;
  document.getElementById('test').innerHTML = x;
 var total = x * p;
-   var at = total * tax;
+   var t = total * tax;
+   var at = total + t;
 document.getElementById('total').innerHTML = at;
  }
       
