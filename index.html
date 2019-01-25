@@ -3,6 +3,7 @@
     
     <script>
       var p;
+      var tax;
       var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if(this.readyState == 4 && this.status == 200) {
@@ -10,7 +11,7 @@ xmlhttp.onreadystatechange = function() {
     document.getElementById('food').innerHTML = mydata.food[0].name;
         document.getElementById('price').innerHTML =  "$"+ mydata.food[0].price;
    p = mydata.food[0].price;
-       
+   tax = mydata.food[0].tax
   }
 };
 xmlhttp.open("GET", "bento.json" , true);
@@ -20,7 +21,8 @@ xmlhttp.send();
       var x = document.getElementById('quant').value;
  document.getElementById('test').innerHTML = x;
 var total = x * p;
-document.getElementById('total').innerHTML = total;
+   var at = total * tax;
+document.getElementById('total').innerHTML = at;
  }
       
     </script>
