@@ -22,11 +22,10 @@ xmlhttp.send();
 //-------------------------------------------------------------------------------------------
  function display() {
       var x = document.getElementById('quant').value;
- document.getElementById('test').innerHTML = x;
 var total = x * p;
    var t = total * tax;
    var at = total + t;
-document.getElementById('total').innerHTML = at.toFixed(2);
+document.getElementById('total').innerHTML = "That will cost $" + at.toFixed(2);
  }
       
     </script>
