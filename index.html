@@ -33,6 +33,9 @@ xmlhttp.onreadystatechange = function() {
              var mydata = JSON.parse(this.responseText);
     document.getElementById('food').innerHTML = mydata.food[0].name;
         document.getElementById('price').innerHTML =  "$"+ mydata.food[0].price;
+    document.getElementById('food2').innerHTML = mydata.food[0].name;
+        document.getElementById('price2').innerHTML =  "$"+ mydata.food[0].price;
+
    p = mydata.food[0].price;
    tax = mydata.food[0].tax
   }
