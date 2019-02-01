@@ -13,11 +13,11 @@
        #chicken {
        width:20vw;
        height:50vh;
-       background-image:url("oVM14.png");
+       background-image:url("unnamed.png");
        background-size:cover;
        float:left;
        margin:40px;
-        color : red;
+        color : orange;
       }
     </style>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -33,8 +33,8 @@ xmlhttp.onreadystatechange = function() {
              var mydata = JSON.parse(this.responseText);
     document.getElementById('food').innerHTML = mydata.food[0].name;
         document.getElementById('price').innerHTML =  "$"+ mydata.food[0].price;
-    document.getElementById('food2').innerHTML = mydata.food[0].name;
-        document.getElementById('price2').innerHTML =  "$"+ mydata.food[0].price;
+    document.getElementById('food2').innerHTML = mydata.food[1].name;
+        document.getElementById('price2').innerHTML =  "$"+ mydata.food[1].price;
 
    p = mydata.food[0].price;
    tax = mydata.food[0].tax
