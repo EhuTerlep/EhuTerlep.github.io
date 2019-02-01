@@ -1,5 +1,14 @@
 <html>
   <head>
+    <style>
+      #beef {
+       width:20vw;
+       height:50vh;
+       background-color:yellow;
+       float:left;
+       margin:40px;
+      }
+    </style>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   </head>
   <body>
@@ -29,12 +38,13 @@ document.getElementById('total').innerHTML = "That will cost $" + at.toFixed(2);
  }
       
     </script>
+    <div id = "beef">
       <input type="text" id="quant">
     <button onclick = "display()">Purchase Beef</button>
         <h1 id = "test"></h1>
     <h1 id = "food"></h1>
 <h3 id = "price"></h3>
     <h2 id = "total"></h2>
-    
+    </div>
   </body>
 </html>
