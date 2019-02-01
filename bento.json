@@ -11,14 +11,12 @@
     },
      
      {
-    "name":"medium crab",
-    "price":9,
-    "kilos":0.25,
+    "name":"cooked chicken",
+    "price":12.59,
+    "tax":0.04712,
     "sides":[
       "mac salad",
-      "rice",
-      "ginger",
-      "caviar"
+      "rice"
       ]
     }
     ]
