@@ -1,36 +1,26 @@
 <html>
   <head>
     <style>
-      #beefT {
-      width: 10vw;
-        height : 20vh;
-         margin:10px;
-
-      }
       #beef {
        width:20vw;
        height:50vh;
        background-image:url("oVM14.png");
        background-size:cover;
        float:left;
-       margin:10px;
+       margin:40px;
+        color : red;
       }
-      #chickenT {
-      width: 10vw;
-        height : 20vh;
-        margin:10px;
-      }
-        #chicken {
+       #chicken {
        width:20vw;
        height:50vh;
        background-image:url("unnamed.png");
        background-size:cover;
        float:left;
-       margin:10px;
+       margin:40px;
+        color : orange;
       }
       body {
         background-image:url("thMP7B9CJ5.jpg");
-
       }
     </style>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -48,7 +38,6 @@ xmlhttp.onreadystatechange = function() {
         document.getElementById('price').innerHTML =  "$"+ mydata.food[0].price;
     document.getElementById('food2').innerHTML = mydata.food[1].name;
         document.getElementById('price2').innerHTML =  "$"+ mydata.food[1].price;
-
    p = mydata.food[0].price;
    tax = mydata.food[0].tax
   }
@@ -72,22 +61,20 @@ document.getElementById('total2').innerHTML = "That will cost $" + at.toFixed(2)
  }    
     </script>
     <div id = "beefT">
-        <input type="text" id="quant">
+    </div>
+    <div id = "beef">
+      <input type="text" id="quant">
     <button onclick = "display()">Purchase Beef</button>
     <h2 id = "food"></h2>
 <h3 id = "price"></h3>
     <h2 id = "total"></h2>
     </div>
-    <div id = "beef">
-     
-    </div>
-       <div id = "chickenT">
-        <input type="text" id="quant2">
+     <div id = "chicken">
+      <input type="text" id="quant2">
     <button onclick = "display2()">Purchase Beef</button>
     <h2 id = "food2"></h2>
 <h3 id = "price2"></h3>
     <h2 id = "total2"></h2>
     </div>
-     <div id = "chicken"></div>
   </body>
 </html>
