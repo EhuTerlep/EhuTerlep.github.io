@@ -78,7 +78,6 @@
       var p4;
       var p5;
       var p6;
-      var food = 0;
       var tax;
       var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
@@ -194,7 +193,6 @@ var total = x * p6;
  }  
       function transfer() {
       var fin = document.getElementById("show").innerHTML;
-        localStorage.setItem("array",food);
         localStorage.setItem("list",fin);
         location.href = "finalized.html";
 
