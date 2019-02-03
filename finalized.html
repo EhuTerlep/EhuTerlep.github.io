@@ -11,9 +11,18 @@
     </style>
   </head>
   <body>
-  <div id = "recipt">
-    <h1>You Pay</h1>
+    <script>
+ var x=localStorage.getItem("array");
+ var y = localStorage.getItem("list");
+ document.getElementById("items").innerHTML=y;
+ document.getElementById("fprice").innerHTML=x;
+    </script>
     
+  <div id = "recipt">
+    <h2>You Pay</h2>
+    <h3 id = "items"></h3>
+     <h1 id = "fprirce"></h1>
+
     </div>
   </body>
 </html>
