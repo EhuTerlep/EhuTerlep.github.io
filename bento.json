@@ -3,21 +3,20 @@
     {
     "name":"cooked beef",
     "price":12.59,
-    "tax": 0.04712,
-    "sides":[
-      "mac salad",
-      "rice"
-      ]
+    "tax": 0.04712
     },
      
      {
     "name":"cooked chicken",
-    "price":12.59,
-    "tax":0.04712,
-    "sides":[
-      "mac salad",
-      "rice"
-      ]
+    "price":11.49,
+    "tax":0.04712
+      
+    },
+      {
+    "name":"cooked fish ",
+    "price":14.29,
+    "tax":0.04712
+      
     }
     ]
 }
