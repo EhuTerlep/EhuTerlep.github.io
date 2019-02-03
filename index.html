@@ -79,7 +79,12 @@
       var p5;
       var p6;
       var tax;
-      var grandtotal = [] ;
+      var grandtotal = [].reduce(add, 0);
+
+function add(a, b) {
+    return a + b;
+}
+console.log(grandtotal);
       var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if(this.readyState == 4 && this.status == 200) {
