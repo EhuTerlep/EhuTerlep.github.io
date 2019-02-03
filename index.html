@@ -79,11 +79,7 @@
       var p5;
       var p6;
       var tax;
-      var grandtotal = [].reduce(add, 0);
-
-function add(a, b) {
-    return a + b;
-}
+      var grandtotal = [];
 console.log(grandtotal);
       var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
@@ -204,12 +200,19 @@ var total = x * p6;
      olTag.appendChild(li);
  }  
       function transfer() {
+        grandtotal.reduce(add, 0);
+        function add(a, b) {
+    return a + b;
+}
+
+console.log(grandtotal);
       var fin = document.getElementById("show").innerHTML;
         localStorage.setItem("list",fin);
                 localStorage.setItem("gt",grandtotal);
         location.href = "finalized.html";
 
       }
+      
     </script>
     </script>
     <div id = "beef">
