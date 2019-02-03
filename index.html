@@ -46,6 +46,15 @@
        margin:40px;
         color : orange;
       }
+        #salmon {
+       width:20vw;
+       height:50vh;
+       background-image:url("Cooked_Salmon[1].png");
+       background-size:cover;
+       float:left;
+       margin:40px;
+        color : blue;
+      }
       body {
         background-image:url("thMP7B9CJ5.jpg");
       }
@@ -71,6 +80,8 @@ xmlhttp.onreadystatechange = function() {
         document.getElementById('price4').innerHTML =  "$"+ mydata.food[3].price;
      document.getElementById('food5').innerHTML = mydata.food[4].name;
         document.getElementById('price5').innerHTML =  "$"+ mydata.food[4].price;
+     document.getElementById('food6').innerHTML = mydata.food[5].name;
+        document.getElementById('price6').innerHTML =  "$"+ mydata.food[5].price;
    p = mydata.food[0].price;
    tax = mydata.food[0].tax
   }
@@ -112,6 +123,13 @@ var total = x * p;
    var t = total * tax;
    var at = total + t;
 document.getElementById('total5').innerHTML = "That will cost $" + at.toFixed(2);
+ } 
+        function display6() {
+      var x = document.getElementById('quant6').value;
+var total = x * p;
+   var t = total * tax;
+   var at = total + t;
+document.getElementById('total6').innerHTML = "That will cost $" + at.toFixed(2);
  }    
     </script>
     </script>
@@ -148,10 +166,18 @@ document.getElementById('total5').innerHTML = "That will cost $" + at.toFixed(2)
   
     <div id = "stew">
       <input type="text" id="quant5">
-    <button onclick = "display5()">Purchase Porkchop</button>
+    <button onclick = "display5()">Purchase Stew</button>
     <h2 id = "food5"></h2>
 <h3 id = "price5"></h3>
     <h2 id = "total5"></h2>
+    </div>
+  
+   <div id = "salmon">
+      <input type="text" id="quant6">
+    <button onclick = "display6()">Purchase Salmon</button>
+    <h2 id = "food6"></h2>
+<h3 id = "price6"></h3>
+    <h2 id = "total6"></h2>
     </div>
   </body>
 </html>
