@@ -38,6 +38,8 @@ xmlhttp.onreadystatechange = function() {
         document.getElementById('price').innerHTML =  "$"+ mydata.food[0].price;
     document.getElementById('food2').innerHTML = mydata.food[1].name;
         document.getElementById('price2').innerHTML =  "$"+ mydata.food[1].price;
+    document.getElementById('food3').innerHTML = mydata.food[1].name;
+        document.getElementById('price3').innerHTML =  "$"+ mydata.food[1].price;
    p = mydata.food[0].price;
    tax = mydata.food[0].tax
   }
@@ -58,10 +60,15 @@ var total = x * p;
    var t = total * tax;
    var at = total + t;
 document.getElementById('total2').innerHTML = "That will cost $" + at.toFixed(2);
+ }   
+       function display3() {
+      var x = document.getElementById('quant3').value;
+var total = x * p;
+   var t = total * tax;
+   var at = total + t;
+document.getElementById('total3').innerHTML = "That will cost $" + at.toFixed(2);
  }    
     </script>
-    <div id = "beefT">
-    </div>
     <div id = "beef">
       <input type="text" id="quant">
     <button onclick = "display()">Purchase Beef</button>
@@ -75,6 +82,13 @@ document.getElementById('total2').innerHTML = "That will cost $" + at.toFixed(2)
     <h2 id = "food2"></h2>
 <h3 id = "price2"></h3>
     <h2 id = "total2"></h2>
+    </div>
+    <div id = "fish">
+      <input type="text" id="quant3">
+    <button onclick = "display3()">Purchase Fish</button>
+    <h2 id = "food3"></h2>
+<h3 id = "price3"></h3>
+    <h2 id = "total3"></h2>
     </div>
   </body>
 </html>
