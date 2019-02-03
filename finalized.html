@@ -10,16 +10,15 @@
       }
     </style>
   </head>
-  <body>
-    <script>
- var y = localStorage.getItem("list");
- document.getElementById("items").innerHTML=y;
-    </script>
-    
+  <body>  
   <div id = "recipt">
     <h2>You Pay</h2>
     <h3 id = "items"></h3>
-
+ 
+  <script>
+ var y = localStorage.getItem("list");
+ document.getElementById("items").innerHTML=y;
+    </script>
     </div>
   </body>
 </html>
