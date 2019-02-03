@@ -78,7 +78,7 @@
       var p4;
       var p5;
       var p6;
-
+      var food = 0;
       var tax;
       var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
@@ -191,7 +191,14 @@ var total = x * p6;
      li.appendChild(newText);//puts newtext and total together
      var olTag=document.getElementById("show");//
      olTag.appendChild(li);
- }    
+ }  
+      function transfer() {
+      var fin = document.getElementById("show").innerHTML;
+        localStorage.setItem("array",food);
+        localStorage.setItem("list",done);
+        location.href = "finalized.html";
+
+      }
     </script>
     </script>
     <div id = "beef">
@@ -245,7 +252,7 @@ var total = x * p6;
   <div id = "list">
     <h1>List</h1>
     <ol id = "show"></ol>
-    
+    <button onclick = "transfer()">Finalize</button>
   </div>
   </body>
 </html>
