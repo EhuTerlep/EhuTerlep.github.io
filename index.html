@@ -31,11 +31,11 @@
        #porkchop {
        width:20vw;
        height:50vh;
-       background-image:url("");
+       background-image:url("Cooked_Porkchop[1].png");
        background-size:cover;
        float:left;
        margin:40px;
-        color : blue;
+        color : red;
       }
       body {
         background-image:url("thMP7B9CJ5.jpg");
@@ -58,6 +58,8 @@ xmlhttp.onreadystatechange = function() {
         document.getElementById('price2').innerHTML =  "$"+ mydata.food[1].price;
     document.getElementById('food3').innerHTML = mydata.food[1].name;
         document.getElementById('price3').innerHTML =  "$"+ mydata.food[1].price;
+      document.getElementById('food4').innerHTML = mydata.food[1].name;
+        document.getElementById('price4').innerHTML =  "$"+ mydata.food[1].price;
    p = mydata.food[0].price;
    tax = mydata.food[0].tax
   }
@@ -86,6 +88,13 @@ var total = x * p;
    var at = total + t;
 document.getElementById('total3').innerHTML = "That will cost $" + at.toFixed(2);
  }    
+       function display4() {
+      var x = document.getElementById('quant4').value;
+var total = x * p;
+   var t = total * tax;
+   var at = total + t;
+document.getElementById('total4').innerHTML = "That will cost $" + at.toFixed(2);
+ }    
     </script>
     <div id = "beef">
       <input type="text" id="quant">
@@ -101,12 +110,21 @@ document.getElementById('total3').innerHTML = "That will cost $" + at.toFixed(2)
 <h3 id = "price2"></h3>
     <h2 id = "total2"></h2>
     </div>
+    
     <div id = "fish">
       <input type="text" id="quant3">
     <button onclick = "display3()">Purchase Fish</button>
     <h2 id = "food3"></h2>
 <h3 id = "price3"></h3>
     <h2 id = "total3"></h2>
+    </div>
+    
+      <div id = "porkchop">
+      <input type="text" id="quant4">
+    <button onclick = "display4()">Purchase Fish</button>
+    <h2 id = "food4"></h2>
+<h3 id = "price4"></h3>
+    <h2 id = "total4"></h2>
     </div>
   </body>
 </html>
