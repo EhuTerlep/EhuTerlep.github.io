@@ -16,12 +16,9 @@
   <div id = "recipt">
     <h2>You Pay</h2>
     <h4 id = "items"></h4>  
-    <h1 id = "fa"></h1>
   <script>
  var y = localStoragegetItem("list");
-     var x = localStorage.getItem("gt");
  document.getElementById("items").innerHTML=y;
-document.getElementById('fa').innerHTML = "Your Total with Tax: $" + x.toFixed(2);
     </script>
     </div>
   </body>
