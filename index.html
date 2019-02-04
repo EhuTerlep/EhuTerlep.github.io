@@ -80,7 +80,6 @@
       var p6;
       var tax;
       var grandtotal;
-      var allat = [];
       var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if(this.readyState == 4 && this.status == 200) {
@@ -111,18 +110,10 @@ xmlhttp.open("GET", "bento.json" , true);
 xmlhttp.send();
 //-------------------------------------------------------------------------------------------
  function display() {
-   console.log(grandtotal);
-      console.log(at);
-
-      var x = document.getElementById('quant').value;
+  var x = document.getElementById('quant').value;
 var total = x * p;
    var t = total * tax;
    var at = total + t;
-   allat.push(at);
-     grandtotal = allat.reduce(add, 0);
-  function add(a, b) {
-    return a + b;
-  }
 var list = "That will cost $" + at.toFixed(2) + " of cooked beef";
      document.getElementById('quant').disabled= true;
    var li= document.createElement('li');//creates a lists
@@ -132,18 +123,10 @@ var list = "That will cost $" + at.toFixed(2) + " of cooked beef";
      olTag.appendChild(li);
  }
    function display2() {
-        console.log(grandtotal);
-   console.log(at);
-
-      var x = document.getElementById('quant2').value;
+     var x = document.getElementById('quant2').value;
 var total = x * p2;
    var t = total * tax;
    var at = total + t;
-allat.push(at);
-     grandtotal = allat.reduce(add, 0);
-  function add(a, b) {
-    return a + b;
-  }
      var list2 = "That will cost $" + at.toFixed(2) + " of cooked chicken";
      document.getElementById('quant2').disabled= true;
 
@@ -161,12 +144,7 @@ allat.push(at);
 var total = x * p3;
    var t = total * tax;
    var at = total + t;
-allat.push(at);
-     grandtotal = allat.reduce(add, 0);
-  function add(a, b) {
-    return a + b;
-  }
-         var list3 = "That will cost $" + at.toFixed(2) + " of cooked fish";
+   var list3 = "That will cost $" + at.toFixed(2) + " of cooked fish";
      document.getElementById('quant3').disabled=true;
 
           var li= document.createElement('li');//creates a lists
@@ -176,18 +154,10 @@ allat.push(at);
      olTag.appendChild(li);
  }    
        function display4() {
-            console.log(grandtotal);
-   console.log(at);
-
       var x = document.getElementById('quant4').value;
 var total = x * p4;
    var t = total * tax;
    var at = total + t;
-allat.push(at);
-     grandtotal = allat.reduce(add, 0);
-  function add(a, b) {
-    return a + b;
-  }
          var list4 = "That will cost $" + at.toFixed(2) + " of cooked porckchops";
      document.getElementById('quant4').disabled = true;
 
@@ -197,20 +167,12 @@ allat.push(at);
      var olTag=document.getElementById("show");//
      olTag.appendChild(li);
  }    
-             function display5() {
-                  console.log(grandtotal);
-   console.log(at);
-
-      var x = document.getElementById('quant5').value;
+    function display5() {           
+     var x = document.getElementById('quant5').value;
 var total = x * p5;
    var t = total * tax;
    var at = total + t;
-allat.push(at);
-     grandtotal = allat.reduce(add, 0);
-  function add(a, b) {
-    return a + b;
-  }
-               var list5 = "That will cost $" + at.toFixed(2) + " of mushroom stew";
+       var list5 = "That will cost $" + at.toFixed(2) + " of mushroom stew";
      document.getElementById('quant5').disabled = true;
 
                 var li= document.createElement('li');//creates a lists
@@ -219,20 +181,12 @@ allat.push(at);
      var olTag=document.getElementById("show");//
      olTag.appendChild(li);
  } 
-        function display6() {
-             console.log(grandtotal);
-   console.log(at);
-
+  function display6() {      
       var x = document.getElementById('quant6').value;
 var total = x * p6;
    var t = total * tax;
    var at = total + t;
-allat.push(at);
-     grandtotal = allat.reduce(add, 0);
-  function add(a, b) {
-    return a + b;
-  }
-          var list6 = "That will cost $" + at.toFixed(2) + " of cooked salmon";
+  var list6 = "That will cost $" + at.toFixed(2) + " of cooked salmon";
      document.getElementById('quant6').disabled = true;
 
            var li= document.createElement('li');//creates a lists
@@ -244,7 +198,6 @@ allat.push(at);
       function transfer() {
       var fin = document.getElementById("show").innerHTML;
         localStorage.setItem("list",fin);
-                localStorage.setItem("gt",grandtotal);
         location.href = "finalized.html";
 
       }
