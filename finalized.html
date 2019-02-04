@@ -18,10 +18,16 @@
     <h4 id = "items"></h4>  
     <h1 id = "fa"></h1>
   <script>
- var y = localStorage.getItem("list");
+ var y = localStoragegetItem("list");
      var x = localStorage.getItem("gt");
+   var last = x.reduce(add, 0);
+
+function add(a, b) {
+    return a + b;
+}
+console.log(sum);
+    document.getElementById("fa").innerHTML = last;
  document.getElementById("items").innerHTML=y;
-     document.getElementById("fa").innerHTML=x;
 
     </script>
     </div>
