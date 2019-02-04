@@ -79,12 +79,7 @@
       var p5;
       var p6;
       var tax;
-      var tp1;
-      var tp2;
-      var tp3;
-      var tp4;
-      var tp5;
-      var tp6;
+      var grandtotal = [];
       var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if(this.readyState == 4 && this.status == 200) {
@@ -119,7 +114,7 @@ xmlhttp.send();
 var total = x * p;
    var t = total * tax;
    var at = total + t;
-   tp1 = at.toFixed(2);
+   grandtotal.push(at);
 var list = "That will cost $" + at.toFixed(2) + " of cooked beef";
      document.getElementById('quant').disabled= true;
    var li= document.createElement('li');//creates a lists
@@ -133,7 +128,7 @@ var list = "That will cost $" + at.toFixed(2) + " of cooked beef";
 var total = x * p2;
    var t = total * tax;
    var at = total + t;
-        tp2 = at.toFixed(2);
+        grandtotal.push(at);
 
      var list2 = "That will cost $" + at.toFixed(2) + " of cooked chicken";
      document.getElementById('quant2').disabled= true;
@@ -149,7 +144,7 @@ var total = x * p2;
 var total = x * p3;
    var t = total * tax;
    var at = total + t;
-            tp1 = at.toFixed(3);
+   grandtotal.push(at);
 
          var list3 = "That will cost $" + at.toFixed(2) + " of cooked fish";
      document.getElementById('quant3').disabled=true;
@@ -165,7 +160,7 @@ var total = x * p3;
 var total = x * p4;
    var t = total * tax;
    var at = total + t;
-            tp4 = at.toFixed(2);
+   grandtotal.push(at);
 
          var list4 = "That will cost $" + at.toFixed(2) + " of cooked porckchops";
      document.getElementById('quant4').disabled = true;
@@ -181,7 +176,7 @@ var total = x * p4;
 var total = x * p5;
    var t = total * tax;
    var at = total + t;
-                  tp5 = at.toFixed(2);
+   grandtotal.push(at);
 
                var list5 = "That will cost $" + at.toFixed(2) + " of mushroom stew";
      document.getElementById('quant5').disabled = true;
@@ -197,7 +192,7 @@ var total = x * p5;
 var total = x * p6;
    var t = total * tax;
    var at = total + t;
-             tp6 = at.toFixed(2);
+   grandtotal.push(at);
 
           var list6 = "That will cost $" + at.toFixed(2) + " of cooked salmon";
      document.getElementById('quant6').disabled = true;
@@ -209,7 +204,6 @@ var total = x * p6;
      olTag.appendChild(li);
  }  
       function transfer() {
-        var grandtotal = tp1 + tp2 + tp3 + tp4 + tp5 + tp6;
       var fin = document.getElementById("show").innerHTML;
         localStorage.setItem("list",fin);
                 localStorage.setItem("gt",grandtotal);
