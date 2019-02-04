@@ -210,12 +210,6 @@ var total = x * p6;
      olTag.appendChild(li);
  }  
       function transfer() {
-        grandtotal.reduce(add, 0);
-        function add(a, b) {
-    return a + b;
-}
-
-console.log(grandtotal);
       var fin = document.getElementById("show").innerHTML;
         localStorage.setItem("list",fin);
                 localStorage.setItem("gt",grandtotal);
