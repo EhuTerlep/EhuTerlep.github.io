@@ -79,7 +79,8 @@
       var p5;
       var p6;
       var tax;
-      var grandtotal = [];
+      var grandtotal;
+      var allat = [];
       var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if(this.readyState == 4 && this.status == 200) {
@@ -114,7 +115,11 @@ xmlhttp.send();
 var total = x * p;
    var t = total * tax;
    var at = total + t;
-   grandtotal.push(at);
+   allat.push(at);
+     grandtotal = allat.reduce(add, 0);
+  function add(a, b) {
+    return a + b;
+  }
 var list = "That will cost $" + at.toFixed(2) + " of cooked beef";
      document.getElementById('quant').disabled= true;
    var li= document.createElement('li');//creates a lists
@@ -128,8 +133,11 @@ var list = "That will cost $" + at.toFixed(2) + " of cooked beef";
 var total = x * p2;
    var t = total * tax;
    var at = total + t;
-        grandtotal.push(at);
-
+allat.push(at);
+     grandtotal = allat.reduce(add, 0);
+  function add(a, b) {
+    return a + b;
+  }
      var list2 = "That will cost $" + at.toFixed(2) + " of cooked chicken";
      document.getElementById('quant2').disabled= true;
 
@@ -144,8 +152,11 @@ var total = x * p2;
 var total = x * p3;
    var t = total * tax;
    var at = total + t;
-   grandtotal.push(at);
-
+allat.push(at);
+     grandtotal = allat.reduce(add, 0);
+  function add(a, b) {
+    return a + b;
+  }
          var list3 = "That will cost $" + at.toFixed(2) + " of cooked fish";
      document.getElementById('quant3').disabled=true;
 
@@ -160,8 +171,11 @@ var total = x * p3;
 var total = x * p4;
    var t = total * tax;
    var at = total + t;
-   grandtotal.push(at);
-
+allat.push(at);
+     grandtotal = allat.reduce(add, 0);
+  function add(a, b) {
+    return a + b;
+  }
          var list4 = "That will cost $" + at.toFixed(2) + " of cooked porckchops";
      document.getElementById('quant4').disabled = true;
 
@@ -176,8 +190,11 @@ var total = x * p4;
 var total = x * p5;
    var t = total * tax;
    var at = total + t;
-   grandtotal.push(at);
-
+allat.push(at);
+     grandtotal = allat.reduce(add, 0);
+  function add(a, b) {
+    return a + b;
+  }
                var list5 = "That will cost $" + at.toFixed(2) + " of mushroom stew";
      document.getElementById('quant5').disabled = true;
 
@@ -192,8 +209,11 @@ var total = x * p5;
 var total = x * p6;
    var t = total * tax;
    var at = total + t;
-   grandtotal.push(at);
-
+allat.push(at);
+     grandtotal = allat.reduce(add, 0);
+  function add(a, b) {
+    return a + b;
+  }
           var list6 = "That will cost $" + at.toFixed(2) + " of cooked salmon";
      document.getElementById('quant6').disabled = true;
 
