@@ -85,7 +85,6 @@
       var tp4;
       var tp5;
       var tp6;
-var grandtotal = tp1 + tp2 + tp3 + tp4 + tp5 + tp6;
       var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if(this.readyState == 4 && this.status == 200) {
@@ -210,6 +209,7 @@ var total = x * p6;
      olTag.appendChild(li);
  }  
       function transfer() {
+        var grandtotal = tp1 + tp2 + tp3 + tp4 + tp5 + tp6;
       var fin = document.getElementById("show").innerHTML;
         localStorage.setItem("list",fin);
                 localStorage.setItem("gt",grandtotal);
