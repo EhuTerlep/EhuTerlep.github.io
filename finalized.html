@@ -20,15 +20,8 @@
   <script>
  var y = localStoragegetItem("list");
      var x = localStorage.getItem("gt");
-   var last = x.reduce(add, 0);
-
-function add(a, b) {
-    return a + b;
-}
-console.log(last);
-    document.getElementById("fa").innerHTML = last;
  document.getElementById("items").innerHTML=y;
-
+document.getElementById('fa').innerHTML = "Your Total with Tax: $" + x.toFixed(2);
     </script>
     </div>
   </body>
