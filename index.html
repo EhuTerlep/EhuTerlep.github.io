@@ -64,7 +64,7 @@ var tally = 0;
       };
  this.score = function(){
            d = dist(this.x,this.y,jumper.x,jumper.y);
-           if (d < 30){
+           if (d < 50){
          tally++;
         document.getElementById('amount').innerHTML = "Your score : " + tally;
         }
