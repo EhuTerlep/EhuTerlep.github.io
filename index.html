@@ -41,7 +41,7 @@ var tally = 0;
       jumper.move();
       points.show();
       points.score();
-     hit = collideRectCircle(barrier.x,barrier.y,200,50,jumper.x,jumper.y,50);
+     hit = collideRectRect(barrier.x,barrier.y,200,50,jumper.x,jumper.y,50,50);
       if (hit == true){
         noLoop()
         window.alert("you lose")
