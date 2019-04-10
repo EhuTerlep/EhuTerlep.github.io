@@ -27,10 +27,11 @@ var d;
 var tally = 0;
 
     function setup() {
+      bg = loadImage('download.jpeg');
       createCanvas(w,h);
     }
     function draw() {
-    background(0);
+    background(bg);
        barrier.show();
       barrier.update();
        barrier2.show();
