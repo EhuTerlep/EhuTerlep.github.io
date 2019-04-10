@@ -6,8 +6,7 @@
       this.velocity = 0;//Velocity of player
       
       this.show = function () {
-        fill(color('red'))
-        rect(this.x,this.y,50,50);
+        image(goku,this.x,this.y,50,50);
       }
       this.up = function() {
        this.velocity += this.lift; //Jumping function
