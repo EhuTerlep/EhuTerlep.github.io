@@ -9,7 +9,7 @@ function barrier() {
       
       this.show = function () {
         fill(color('red'))
-        rect(this.x,this.y,200,50);
+        image(blast,this.x,this.y,200,50);
       }
          this.update = function() {
        this.velocity += this.gravity; //Gravity applied when not jumping
