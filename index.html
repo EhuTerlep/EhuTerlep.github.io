@@ -45,7 +45,12 @@ var blast;
       points.show();
       points.score();
      hit = collideRectRect(barrier.x,barrier.y,200,50,jumper.x,jumper.y,50,50);
+     hit2 = collideRectRect(barrier2.x,barrier2.y,200,50,jumper.x,jumper.y,50,50);
       if (hit == true){
+        noLoop()
+        window.alert("you lose")
+      }
+       if (hit2 == true){
         noLoop()
         window.alert("you lose")
       }
