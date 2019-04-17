@@ -14,7 +14,6 @@
   </style>
   </head>
   <body>
-        <h1 id = "amount"></h1>
     <script>
     var hit = false;
     var w = window.innerWidth;
@@ -74,7 +73,7 @@ var blast;
            d = dist(this.x,this.y,jumper.x,jumper.y);
            if (d < 50){
          tally++;
-        document.getElementById('amount').innerHTML = "Your score : " + tally;
+        text('Your score : ' + tally , 10 , 30);
         }
             if(this.x > w-50) {
           this.x = w/2;
