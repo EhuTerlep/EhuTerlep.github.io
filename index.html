@@ -26,6 +26,7 @@ var d;
 var tally = 0;
 var goku;
 var blast;
+var d = dist(this.x,this.y,jumper.x,jumper.y);
     function setup() {
       bg = loadImage('download.jpeg');
       goku = loadImage('goku_stand_by_arestwinblade-d4jrskn - Edited.png');
@@ -52,7 +53,6 @@ var blast;
         noLoop()
         window.alert("you lose")
       }
-      d = dist(this.x,this.y,jumper.x,jumper.y);
            if (d < 50){
          tally++;
              textSize(32);
