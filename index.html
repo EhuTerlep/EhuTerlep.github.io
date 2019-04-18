@@ -22,10 +22,10 @@
         var barrier2 = new barrier2();
     var jumper = new jumper();
         var points = new points();
+      var d;
 var tally = 0;
 var goku;
 var blast;
-var d = dist(this.x,this.y,jumper.x,jumper.y);
     function setup() {
       bg = loadImage('download.jpeg');
       goku = loadImage('goku_stand_by_arestwinblade-d4jrskn - Edited.png');
@@ -42,6 +42,7 @@ var d = dist(this.x,this.y,jumper.x,jumper.y);
       jumper.update();
       jumper.move();
       points.show();
+      points.score();
      hit = collideRectRect(barrier.x,barrier.y,200,50,jumper.x,jumper.y,50,50);
      hit2 = collideRectRect(barrier2.x,barrier2.y,200,50,jumper.x,jumper.y,50,50);
       if (hit == true){
@@ -52,12 +53,7 @@ var d = dist(this.x,this.y,jumper.x,jumper.y);
         noLoop()
         window.alert("you lose")
       }
-           if (d < 50){
-         tally++;
-             textSize(32);
-             fill(color("white"));
-        text('Your score : ' + tally , 10 , 30);
-           }
+          
     var randX = random(-30,30);
     points.x += randX;
     var randY = random(-30,30);
@@ -74,7 +70,14 @@ var d = dist(this.x,this.y,jumper.x,jumper.y);
         fill(color('yellow'));
        ellipse(this.x,this.y,this.l,this.w);
       };
-           
+          this.score = function(){
+           d = dist(this.x,this.y,jumper.x,jumper.y);
+           if (d < 50){
+         tally++;
+             textSize(32);
+             fill(color("white"));
+        text('Your score : ' + tally , 10 , 30);
+        } 
             if(this.x > w-50) {
           this.x = w/2;
           this.y = h/2;
