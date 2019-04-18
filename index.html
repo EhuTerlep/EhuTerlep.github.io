@@ -58,7 +58,9 @@ var blast;
     points.x += randX;
     var randY = random(-30,30);
     points.y += randY;
-           
+         textSize(32);
+             fill(color("white"));
+        text('Your score : ' + tally , 10 , 30);  
     }
     //-------------------------------------------------------------------------------------
       function points() {
@@ -74,9 +76,6 @@ var blast;
            d = dist(this.x,this.y,jumper.x,jumper.y);
            if (d < 50){
          tally++;
-             textSize(32);
-             fill(color("white"));
-        text('Your score : ' + tally , 10 , 30);
         } 
             if(this.x > w-50) {
           this.x = w/2;
