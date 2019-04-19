@@ -27,18 +27,18 @@
 var tally = 0;
 var goku;
 var blast;
-   var snd;   
+   var bgsound;   
      function preload() {
-     snd = loadSound("Dragon Ball Z Budokai - Challengers Epic Rock Cover.mp3");
+     bgsound = loadSound("Dragon Ball Z Budokai - Challengers Epic Rock Cover.mp3");
      }
     function setup() {
       bg = loadImage('download.jpeg');
       goku = loadImage('goku_stand_by_arestwinblade-d4jrskn - Edited.png');
       blast = loadImage('Rasengan.png');
       createCanvas(w,h);
-       snd.setVolume(1);
-        snd.play();
-        snd.loop();
+       bgsound.setVolume(1);
+        bgsound.play();
+        bgsound.loop();
     }
     function draw() {
     background(bg);
