@@ -9,9 +9,12 @@
       var video;
       function setup(){
         video = createCapture(VIDEO);
+        video.size(0,0);
       }
       function draw(){
-        
+        background(255);
+        tint(255,255,255);
+        image(video,0,0,720,480);
       }
     </script>
   </body>
