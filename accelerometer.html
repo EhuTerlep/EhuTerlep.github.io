@@ -3,16 +3,25 @@
     <script src = "p5.min.js"></script>
   </head>
   <body>
-    <h1 id = "accel"></h1>
+    <h1 id = "ax"></h1>
     <script>
-      var d;
+      var ax;
+      var ay;
+      var xHigh = 0;
+      var yHigh = 0
       function setup(){
         createCanvas(window.innerWidth,window.innerHeight);
       }
       function draw(){
-        d = accelerationX
-        document.getElementById('accel').innerHTML = d;
-      }
+        ax = accelerationX
+        if(ax < xHigh){
+          xHigh = ax;
+          document.getElementById('ax').innerHTML = xHigh;
+        }
+      
+        }
+        
+      
     </script>
   </body>
 </html>
