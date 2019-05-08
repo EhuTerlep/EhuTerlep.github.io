@@ -1,27 +1,29 @@
+
 <html>
-  <head>
-    <script src = "p5.min.js"></script>
-  </head>
-  <body>
-    <h1 id = "ax"></h1>
-    <script>
-      var ax;
-      var ay;
-      var xHigh = 0;
-      var yHigh = 0
-      function setup(){
-        createCanvas(window.innerWidth,window.innerHeight);
-      }
-      function draw(){
-        ax = accelerationX
-        if(ax < xHigh){
-          xHigh = ax;
-          document.getElementById('ax').innerHTML = xHigh;
-        }
-      
-        }
-        
-      
-    </script>
-  </body>
+ <head>
+<script src ="p5.min.js"></script>
+ </head>
+ <body>
+   <h1 id ="ax"></h1>
+   <h1 id ="ay"></h1>
+   <script>
+   var ax;
+   var ay;
+   var arrayX = [];
+   var arrayY = [];
+     function setup() {
+       createCanvas(window.innerWidth, window.innerHeight);
+     }
+     function draw() {
+       ax = accelerationX;
+       arrayX.push(ax);
+       arrayX.sort(function(a,b){
+         return(b-a);
+         document.getElementById('ax').innerHTML = ax;
+       })
+       ay = accelerationY;
+       document.getElementById('ay').innerHTML = ay;
+     }
+   </script>
+ </body>
 </html>
